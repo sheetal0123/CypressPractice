@@ -1,0 +1,32 @@
+{
+  "name": "cypresspractice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "myscript1": "node_modules\\.bin\\cypress run --spec cypress/integration/oceanblue/PageObjectModel/TestClass.js",
+    "myscript2": "npm run myscript1 -- --browser chrome",
+    "POMAllCases": "node_modules\\.bin\\cypress run --spec \"cypress/integration/oceanblue/PageObjectModel/*\"",
+    "ecommercebdd": "node_modules\\.bin\\cypress run --headed --browser chrome --spec cypress/integration/oceanblue/CucumberFW/ecommerce.feature"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  },
+  "author": "Sheetal Singh",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^9.2.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-iframe": "^1.0.1",
+    "mocha": "^9.1.3",
+    "mochawesome": "^7.0.1",
+    "multiple-cucumber-html-reporter": "^1.18.3"
+  }
+}

@@ -1,0 +1,13 @@
+{
+    "defaultCommandTimeout": 6000,
+    "env": {
+      "url": "https://rahulshettyacademy.com"
+    },
+    "reporter": "mochawesome",
+    "testFiles": "**/*.*",
+    "retries": {
+        "runMode": 5      
+     },
+    "projectId": "nfd6nb"
+  }
+  
