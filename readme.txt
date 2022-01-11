@@ -3,8 +3,10 @@ Angular Practice Site: https://rahulshettyacademy.com/angularpractice/
 All Web element:  https://rahulshettyacademy.com/AutomationPractice/
 Html Php website: https://rahulshettyacademy.com/seleniumPractise/#/
                   https://www.qaclickacademy.com/practice.php
+API Automation    https://rahulshettyacademy.com/angularAppdemo/
 
 Best JavaScript Learning: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
+Git link https://github.com/sheetal0123/CypressPractice
 
 ==================================================================================
 #Installation
@@ -57,9 +59,9 @@ npm run POMAllCases
 #Imp folder and files
 package.json  | just like pom.xml
 cypress.json  | cypress project related data, retry, baseUrl, for default config override
-cypress/plugins/index.js : Some plugin related things
+cypress/plugins/index.js : Plugin read plugin info given in package.json or cypress.json
 cypress/support/commands.js : common utils type methods can be added here
-cypress/support/index.js : ?
+cypress/support/index.js : for custom commands accessibility
 
 cypress/fixtures : For Test Data
 cypress/integration : For all test cases
@@ -188,8 +190,24 @@ update jsonDir and reportPath variable in it
 Run the JS file : node multiple-cucumber-html-reporter.js
 Generated Report Path: C:\repo_personal\CypressPractice\reports\multiple-cucumber-html-report\index.html
 
+==================================================================================
+#API Call Intercept
+Helpful in automating some scenarios which we can not do in Selenium etc
+https://docs.cypress.io/api/commands/intercept
+
+GET https://rahulshettyacademy.com/Library/GetBook.php?AuthorName=shetty
+Return lot of records
+Problem stmt: We need to mock it and need only one record
+
+
+Proper API testing can also be done
+https://docs.cypress.io/api/commands/request
 
 ==================================================================================
+# Azure SQL DB Integration
+Refer udemy video again
+==================================================================================
+
 #How to Write CSS
 1. Id         = #id
 
@@ -376,6 +394,14 @@ Q: cypress dont maintain cookies from one test to another.Need to login everytim
 A: https://docs.cypress.io/api/cypress-api/cookies#Defaults
    Cypress.Cookies.preserveOnce() and Cypress.Cookies.defaults
    This keep you logged in which executing multiple test cases in the same session.
+
+Q: Can we visit two separete domains in single test
+A: No
+it('navigates', () => {
+  cy.visit('https://apple.com')
+  cy.visit('https://google.com') // this will error
+})
+
 
 
 
